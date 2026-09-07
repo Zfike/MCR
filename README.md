@@ -58,8 +58,10 @@ Business phone rings
                  Live dashboard
 ```
 
-# Basic Install and Run
 ---
+
+# Basic Install and Run
+
 Clone this repo into your chosen directory. CD into [root]/backend
 ```bash
 npm start
