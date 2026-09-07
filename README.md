@@ -25,7 +25,7 @@ project-root/
 ├── .gitignore
 ├── .env.example
 └── README.md
-
+```
 ---
 
 ## Typical Workflow
