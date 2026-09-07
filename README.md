@@ -6,6 +6,8 @@ When a call to a business goes unanswered, the system can send the caller an aut
 
 The project can run in **demo mode without a Twilio account**. In demo mode, SMS messages are logged to the console and displayed on the live dashboard instead of actually being sent.
 
+As a simple demo, this application only needs ngrok installed separately in order to have the localhost web server exposed to the internet so that it can interact with Twilio (Still needs extra work).
+
 ---
 
 ## Project Structure
@@ -62,3 +64,4 @@ Clone this repo into your chosen directory. CD into [root]/backend
 ```bash
 npm start
 ```
+This will start the app in demo mode, which means it will use sample .env values without Twilio account information. 
