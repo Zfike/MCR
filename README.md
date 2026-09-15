@@ -2,7 +2,7 @@
 
 A working demo of a missed-call recovery system for local service businesses such as HVAC, plumbing, and dental practices.
 
-When a call to a business goes unanswered, the system can send the caller an automated text instead of letting the lead disappear into voicemail. The demo also includes an optional AI voice-answering path.
+When a call to a business goes unanswered, the system can send the caller an automated text instead of letting the lead disappear into voicemail. The demo also includes an optional AI voice-answering path (currently not implemented).
 
 The project can run in **demo mode without a Twilio account**. In demo mode, SMS messages are logged to the console and displayed on the live dashboard instead of actually being sent.
 
@@ -30,6 +30,16 @@ project-root/
 ```
 ---
 
+# Basic Install and Run
+
+Clone this repo into your chosen directory. CD into [root]/backend
+```bash
+npm start
+```
+This will start the app in demo mode, which means it will use sample .env values without Twilio account information. 
+
+---
+ 
 ## Typical Workflow
 
 ```text
@@ -60,10 +70,22 @@ Business phone rings
 
 ---
 
-# Basic Install and Run
+## Project Technical Theory
 
-Clone this repo into your chosen directory. CD into [root]/backend
-```bash
-npm start
-```
-This will start the app in demo mode, which means it will use sample .env values without Twilio account information. 
+Missed Call Recovery (temp name) will be a web based application that will be managed by LLC (name?) and configured for a client. 
+
+The system shall include:
+ - a core of services to run the application
+ - a web server to serve those services (API based communication)
+ - Telephony service to handle the calls themselves
+ - AI integration in order to better tailor SMS responses (and return calls later) to customers of our clients
+ - Web GUI for clients to interact with the system.
+
+Testing was done with Twilio, however any telephony service that offers a business number to use for managing customer calls and has an API that the application can use. 
+
+Ideally a scalable database would be attached to the system (Postgres, PG Edge, SQLite, etc.). A database would be added per customer and managed from the LLC (Name?). A client's database would contain call logs and metadata for the business. 
+
+The database would go along with a per client instance of the application with a client facing dashboard that they can access to see call data and a call log. A client could also make changes for their application [changes tbd].  
+
+
+
