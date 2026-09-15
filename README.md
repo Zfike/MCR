@@ -83,7 +83,7 @@ The system shall include:
 
 Testing was done with Twilio, however any telephony service that offers a business number to use for managing customer calls and has an API that the application can use will work. 
 
-A business can have one to many phone numbers. At least one "main" business number will be attached to the system. If a business has more than one phone, the system will need to be able to route notifications to "on-duty" phone numbers.
+A business can have one to many phone numbers. At least one "main" business number will be attached to the system. If a business has more than one phone, the system will need to be able to route notifications and/or calls to "on-duty" phone numbers.
 
 Ideally a scalable database would be attached to the system (Postgres, PG Edge, SQLite, etc.). A database would be added per customer and managed from the LLC (Name?). A client's database would contain call logs and metadata for the business. 
 
