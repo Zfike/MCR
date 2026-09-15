@@ -54,7 +54,13 @@ Business phone rings
         │
         ├── answered
         │      └── call continues normally
-        │
+        |      └── AI agent processes caller information
+        |      └── SMS notification to "on-duty" phone (if applicable)
+        |      └── logs the lead
+        │                |
+        |                ▼
+        |          Live dashboard
+        |
         └── unanswered / busy / failed
                 │
                 ▼
@@ -78,12 +84,13 @@ The system shall include:
  - a core of services to run the application
  - a web server to serve those services (API based communication)
  - Telephony service to handle the calls themselves
- - AI integration in order to better tailor SMS responses (and return calls later) to customers of our clients
+ - AI integration in order to better tailor SMS responses (and return calls later) to customers of our clients. Another aspect of AI integration is increasing the reaction time to an incoming call. This way a call can be answered within 1-2 rings.
  - Web GUI for clients to interact with the system.
+ - The web GUI will display logs of calls and notifications for recent and missed calls
 
 Testing was done with Twilio, however any telephony service that offers a business number to use for managing customer calls and has an API that the application can use will work. 
 
-A business can have one to many phone numbers. At least one "main" business number will be attached to the system. If a business has more than one phone, the system will need to be able to route notifications and/or calls to "on-duty" phone numbers.
+A business can have one to many phone numbers. At least one "main" business number will be attached to the system. If a business has more than one phone, the system will need to be able to answer a call, process a caller's info, store the call log, and route notifications and/or calls to "on-duty" phone numbers.
 
 Ideally a scalable database would be attached to the system (Postgres, PG Edge, SQLite, etc.). A database would be added per customer and managed from the LLC (Name?). A client's database would contain call logs and metadata for the business. 
 
