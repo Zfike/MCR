@@ -83,8 +83,8 @@ Missed Call Recovery (temp name) will be a web based application that will be ma
 The system shall include:
  - a core of services to run the application
  - a web server to serve those services (API based communication)
- - Telephony service to handle the calls themselves
- - AI integration in order to better tailor SMS responses (and return calls later) to customers of our clients. Another aspect of AI integration is increasing the reaction time to an incoming call. This way a call can be answered within 1-2 rings.
+ - Telephony service to handle the calls themselves and provides an API to interact with the application
+ - AI integration in order to better tailor SMS responses to customers of our clients and answer calls. Another aspect of AI integration is increasing the reaction time to an incoming call. This way a call can be answered within 1-2 rings.
  - Web GUI for clients to interact with the system.
  - The web GUI will display logs of calls and notifications for recent and missed calls
 
@@ -94,7 +94,7 @@ A business can have one to many phone numbers. At least one "main" business numb
 
 Ideally a scalable database would be attached to the system (Postgres, PG Edge, SQLite, etc.). A database would be added per customer and managed from the LLC (Name?). A client's database would contain call logs and metadata for the business. 
 
-The database would go along with a per client instance of the application with a client facing dashboard that they can access to see call data and a call log. A client could also make changes for their application [changes tbd].  
+The database would go along with a per client instance of the application with a client facing dashboard that they can access to see call data and a call log. A client could also make changes for their application [changes tbd] through the dashboard. 
 
 
 
