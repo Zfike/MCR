@@ -68,6 +68,7 @@ Business phone rings
                 │
                 ├── sends recovery SMS
                 ├── tells caller they were texted
+                ├── notification to "on-duty" phone
                 └── logs the lead
                         │
                         ▼
